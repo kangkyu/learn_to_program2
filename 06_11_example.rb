@@ -1,3 +1,5 @@
+# 11.6 Back to Our Regularly Scheduled Programming
+
 require 'yaml'
 # First we define these fancy methods...
 def yaml_save object, filename
@@ -15,6 +17,6 @@ filename = 'DatasGadgets.txt'
 
 yaml_save test_array, filename
 read_array = yaml_load filename
-puts (read_array = test_array)
+puts (read_array == test_array)
 
 puts read_array.to_s
