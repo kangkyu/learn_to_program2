@@ -1,0 +1,68 @@
+12
+new classes of objects
+
+So far we've seen several kinds, or "classes", of objects:
+
+strings,
+integers,
+floats,
+arrays,
+a few specials (= true, false, nil),
+and so on.
+
+In Ruby these class names are always capitalized:
+
+String,
+Integer,
+Float,
+Array, and
+Dir.
+
+File.open = a mildly unusual way to get an object from a class
+
+in General, you'll use the new method
+
+--
+Because we can create array and string literals using [...] and '...', we rarely create them using new. (Though it might not be clear from the example there, String.new creates an empty string, and Array.new creates an empty array.) Also, numbers are special exceptions: you can't create an integer with Integer.new (Which number would it create, you know?) You can make one only using an integer literal (just writing it out as you've been doing)
+
+--
+You can compare times using the comparison methods (an earlier time is "less" than a later time), and if you subtract one time from another, you'll get the number of seconds between them. Play around with it!
+
+--
+Another useful class is the Hash class. Hashes are a lot like arrays: they have a bunch of slots that can point to various objects.
+
+However, in an array, the slots are lined up in a row, and each one is numbered (starting from zero). In a hash, the slots aren't in a row (they are just sort of jumbled together),
+
+and you use any object to refer to a slot, not just a number. It's good to use hashes when you have a bunch of things you want to "keep track of" but they don't really fit into an ordered list.
+
+--
+If I use an array, I have to remember that slot 0 is for "shia-a", slot 1 is for "shaya", and so on. But if I use a hash, it's easy! Slot 'shia-a' holds the word for "shia-a", of course. There's nothing to remember. 
+
+You might have noticed that when we use each, the objects in the hash came out in the same order we put them in.
+
+--
+Hashes are arrays are good for different things; it's up to you to decide which one is best for a particular problem. I probably use hashes at least as often as arrays; they're wonderful.
+
+--
+Range is another great class. Ranges represent intervals of numbers. On the next page is just a quick glance at some of the methods ranges have.
+
+--
+12.5 Stringy Superpowers
+
+I'd really feel like I was doing you a disservice if I didn't show you at least a little more of what strings can do (in Ruby). Plus, if I do, I can give you more interesting exercises. Mind you, I'm still not going to show you even half, but I've just got to show you a little more.
+
+array methods (also work a lot) string methods
+the [...] method
+
+--
+12.7
+
+I'll warn you right now: this section is a bit of brain bender, so if you're not feeling particularly strong of stomach, you can skip to the next chapter. At least for now, it's mainly of academic interest. 
+
+As you may have noticed, we can call methods on strings (such as length and chomp), but we can also call methods on the actual String class, methods such as new. 
+
+This is because, in Ruby, classes are real objects (like any data-type) And since every object is in some class, classes must be, too. 
+
+(what is class of classes)
+
+We can find the class of an object using class method:
